@@ -34,7 +34,7 @@ const Locations: React.FC = () => {
           </p>
         </div>
         <div className="mt-16 relative max-w-5xl mx-auto">
-          <img src="istockphoto-937895006-612x612.jpg" alt="World Map" className="w-full h-auto opacity-20" />
+          <img src="https://imgur.com/a/YFrtPQg" alt="World Map" className="w-full h-auto opacity-20" />
           {locations.map((loc, index) => (
             <LocationPin key={index} location={loc} />
           ))}

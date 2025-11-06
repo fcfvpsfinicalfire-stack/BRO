@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -24,9 +23,11 @@ import JoinDiscord from './components/JoinDiscord';
 import AIAssistant from './components/AIAssistant';
 import LoadingScreen from './components/LoadingScreen';
 import HostingPlans from './components/HostingPlans';
+import WebHostingPlansHomepage from './components/WebHostingPlansHomepage';
 import TechnologyPartners from './components/TechnologyPartners';
-import StatsShowcase from './components/StatsShowcase';
+import ServerHardware from './components/ServerHardware';
 import NotificationBanner from './components/NotificationBanner';
+import DDoSProtection from './components/DDoSProtection';
 
 export type Page = 'home' | 'pricing' | 'vps' | 'dedicated' | 'discord' | 'webhosting';
 
@@ -49,12 +50,14 @@ const App: React.FC = () => {
 
   const HomePageContent: React.FC = () => (
     <>
-      <GamesWeHost />
-      <WhyChooseUs />
-      <StatsShowcase />
-      <TechnologyPartners />
+      <GamesWeHost setPage={setPage} />
       <HostingPlans selectedGame={selectedGame} setSelectedGame={setSelectedGame} setPage={setPage} />
+      <WebHostingPlansHomepage setPage={setPage} />
+      <WhyChooseUs />
+      <DDoSProtection />
+      <ServerHardware />
       <ControlPanel />
+      <TechnologyPartners />
       <Locations />
       <OurGuarantees />
       <Testimonials />

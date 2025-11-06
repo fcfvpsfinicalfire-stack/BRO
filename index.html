@@ -143,6 +143,23 @@
                 '0%': { transform: 'translateY(0)' },
                 '100%': { transform: 'translateY(-50%)' },
               },
+              spin: {
+                'from': { transform: 'rotate(0deg)' },
+                'to': { transform: 'rotate(360deg)' },
+              },
+              radiate: {
+                '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 20px -5px rgba(56, 189, 248, 0.4)' },
+                '50%': { transform: 'scale(1.1)', boxShadow: '0 0 30px 5px rgba(56, 189, 248, 0.6)' },
+              },
+              'ring-pulse': {
+                  '0%, 100%': { transform: 'scale(1)', opacity: '0.2' },
+                  '50%': { transform: 'scale(1.05)', opacity: '0.4' },
+              },
+              'threat-zap': {
+                  '0%': { transform: 'scale(0)', opacity: '0' },
+                  '50%': { transform: 'scale(1.2)', opacity: '1' },
+                  '100%': { transform: 'scale(0)', opacity: '0' },
+              },
             },
             animation: {
               float: 'float 6s ease-in-out infinite',
@@ -168,6 +185,11 @@
               'logo-pulse': 'logo-pulse 2.5s ease-in-out infinite',
               'blob': 'blob 10s ease-in-out infinite',
               'matrix-scroll': 'matrix-scroll 120s linear infinite',
+              'spin-slow': 'spin 20s linear infinite',
+              'spin-slower': 'spin 40s linear infinite reverse',
+              radiate: 'radiate 4s ease-in-out infinite',
+              'ring-pulse': 'ring-pulse 3s ease-in-out infinite',
+              'threat-zap': 'threat-zap 2s ease-out infinite',
             }
           },
         },
